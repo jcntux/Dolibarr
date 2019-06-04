@@ -1,0 +1,116 @@
+<?php
+/* Copyright (C) 2013 IComm NOMOREDJO Jean-christophe <jcnrdjo@yahoo.fr>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+require '../main.inc.php';
+require_once 'include/function.inc';
+
+/*
+ * View
+ */
+
+//header("Content-type: text/html; charset=" . $conf->file->character_set_client);
+
+if(!icomm_checkaccess()) {
+	accessforbidden();
+}
+
+icomm_boot();
+
+$heads = '';
+$arrayofjs = array();
+$arrayofcss = array('/iccashdesk/css/style.css');
+$heads .= icomm_add_js_var();
+top_htmlhead($heads, '', 0 ,0 ,$arrayofjs ,$arrayofcss);
+
+print "<body>\n";
+
+print "<div class=\"page\">\n";
+
+/*
+ * Menu
+ */
+print "<div class=\"page-header\">\n";
+
+print $langs->trans('Logout');
+print "<a href=\"" . DOL_URL_ROOT . "/user/logout.php\">" . img_picto($langs->trans('Logout'), 'logout.png') . "</a>\n";
+
+print "</div>\n";
+
+/*
+ * Get the current tab
+ */
+if(!($tab = GETPOST('tab', '', 1))) {
+	$tab = 'cashier';
+}
+
+$tab = strtolower($tab);
+
+/*
+ * Tabs selector
+ */
+$url = icomm_url('index.php', TRUE);
+print "<div id=\"overlay\" >\n";
+print "<div id=\"overlay-titlebar\">\n";
+
+print "<ul id=\"overlay-tabs\">\n";
+
+print "<li" . ($tab == 'cashier' ? " class=\"active\"" : '' ) . ">\n";
+print "<a href=\"" . $url . "?tab=cashier" . "\">" . $langs->trans('Cashier') . "</a>\n";
+print "</li>\n";
+
+print "<li" . ($tab == 'negsell' ? " class=\"active\"" : '' ) . ">\n";
+print "<a href=\"" . $url . "?tab=negsell" . "\">" . $langs->trans('NegativeStockSellHistory') . "</a>\n";
+print "</li>\n";
+
+print "<li" . ($tab == 'booking' ? " class=\"active\"" : '' ) . ">\n";
+print "<a href=\"" . $url . "?tab=booking" . "\">" . $langs->trans('ReservationSellHistory') . "</a>\n";
+print "</li>\n";
+
+print "</ul>\n";
+
+print "</div>\n";
+print "</div>\n";
+
+/*
+ * Display current tab
+ */
+print "<div id=\"message-box\"></div>\n";
+
+print "<div class=\"tab-content\">\n";
+if($tab == 'cashier') {
+	print icomm_theme_tab_cashier();
+
+} elseif($tab == 'negsell') {
+	print icomm_theme_tab_negsell();
+
+} elseif($tab == 'booking') {
+	print icomm_theme_tab_booking();
+}
+print "</div> <!-- tab-content -->\n";
+
+print icomm_popup();
+
+print "<div class=\"page-footer\"></div>\n";
+print "</div> <!-- page-footer -->\n";
+
+print icomm_add_js_var();
+
+print "</body></html>\n";
+
+$db->close();
+
+?>

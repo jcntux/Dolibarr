@@ -1,0 +1,26 @@
+# Language file - fr_FR - iccashdesk
+CHARSET=UTF-8
+ThirdParty=Tiers
+Warehouse=Entrepôt
+NegativeStockSellHistory=Vente négative
+ReservationSellHistory=Réservation
+AddThisArticle=Ajouter
+TotalTicket=Total ticket
+PaymentMode=Mode de règlement
+Cash=Espèce
+Cheque=Chèque
+Reported=Différé
+DateEcheance=Echéance
+Change=Rendu
+AddDate=Ajouter
+Searching=Recherche
+NextPayDates=Prochaine échéances
+Action=Action
+Suspend=Suspendre
+NewSell=Nouvelle vente
+Lock=Vérouiller
+POSLocked=CAISSE VERROUEILLEE
+Unlock=Dévérouiller
+SellID=ID Vente
+Cashier=Caisse
+DB_PRODUCTBOOKNG_DESCRIPTION=Mise sur un article

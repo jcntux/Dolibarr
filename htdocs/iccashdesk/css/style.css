@@ -1,0 +1,327 @@
+/* Copyright (C) 2013 IComm NOMOREDJO Jean-christophe <jcnrdjo@yahoo.fr>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+body {
+background: #eee;
+color: #333;
+margin: 0;
+padding: 0;
+text-align: center;
+font: 0.7em verdana, arial, helvetica;
+}
+
+a {
+text-decoration: none;
+}
+
+.hidden {
+display: none;
+}
+
+.front {
+z-index: 100;
+}
+
+.error {
+border-color: #f00;
+}
+
+.fullwidth {
+width: 100%
+}
+
+.big {
+font-size: 2em;
+}
+
+.line-break {
+clear: both;
+display: block;
+}
+
+input, textarea, select {
+border-radius: 0;
+box-shadow: none;
+cursor: pointer;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+select:focus,
+select:hover {
+box-shadow: 0 0 2px 0 #000;
+}
+
+/*
+ * Page
+ */
+.page {
+border: 2px solid #000;
+background: #fff;
+text-align: left;
+margin: 10px auto;
+height: auto;
+width: 960px;
+min-height: 480px;
+}
+
+.page-header {
+font-size: 14px;
+margin: 0 auto;
+height: 84px;
+background: #7bf;
+padding: 4px;
+}
+
+.page-footer {
+clear: both;
+height: 15px;
+}
+
+/*
+ * Tabs
+ */
+.tabs {
+margin: 0 auto;
+min-height: 15px;
+min-width: 960px;
+padding: 0.2em 26px 2em 0.2em;
+position: relative;
+}
+
+.tabs-header {
+padding: 0 20px;
+position: relative;
+white-space: nowrap;
+z-index: 50;
+}
+
+.tabs-header li {
+display: inline;
+list-style: none inside none;
+margin: 0 0 0 -3px;
+padding: 0;
+}
+
+.tabs-header li a,
+.tabs-header li {
+background-color: #A6A7A2;
+border-radius: 2px;
+color: #000;
+display: inline-block;
+font-size: 11px;
+font-weight: bold;
+margin: 0 0 2px;
+outline: 0 none;
+padding: 0 14px;
+transition: background-color 0.2s;
+-webkit-transition: background-color 0.2s;
+}
+
+.tabs-header li.active {
+background-color: #4ff;
+}
+
+.tabs-header li:hover {
+background: #ccc;
+}
+
+.tab-content {
+height: auto;
+margin: 5px;
+}
+
+.tab-block {
+display: inline-block;
+vertical-align: top;
+}
+
+.block-left {
+position: relative;
+width: 615px;
+margin-right: 4px;
+}
+
+.block-right {
+position: relative;
+margin-right: 4em;
+float: right;
+}
+
+/*
+ * ElementGrid
+ */
+
+.grid {
+width: 100%;
+}
+
+table.grid {
+width: 100%;
+border-collapse:collapse;
+}
+
+.header-action div,
+.icomm-element-wrapper {
+display: inline-block;
+}
+
+.panel-line {
+margin-bottom: 2em;
+}
+
+.panel-line div.icomm-element-wrapper span {
+display: block;
+}
+
+.element-title span {
+color: #f00;
+}
+
+tr.grid-header,
+tr.grid-line {
+text-align: center;
+}
+
+tr.grid-header {
+color: #fff;
+background: #000;
+}
+
+.select-autocomplete input.ui-autocomplete-input {
+width: 90%;
+text-align: center;
+}
+
+.grid td {
+min-width: 56px;
+}
+
+.grid-header .header-product,
+.cell-gridproduct {
+width: 25em;
+}
+
+.cell-gridproduct > div {
+width: 100%;
+}
+
+.icomm-element-wrapper input {
+text-align: right;
+vertical-align: middle;
+}
+
+.block {
+position: absolute;
+margin: auto;
+}
+
+.bubble span.arrow.top {
+margin-left: 1em;
+}
+
+.block-block {
+padding: 0.4em;
+border: solid 2px rgba(0,0,0,0.2);
+min-width: 25em;
+z-index: 50;
+background-color: #fff;
+}
+
+.block-header {
+background: none repeat scroll 0 0 #999988;
+height: 1em;
+margin-bottom: 0.3em;
+padding: 0.3em;
+font-weight: bold;
+}
+
+.block-header [class^="icon-"] {
+float: right;
+cursor: pointer;
+}
+
+.block-content > div {
+display: block;
+text-align: left;
+}
+
+.block-content .element-title {
+font-weight: bold;
+}
+
+.block-content ul {
+list-style: square outside none;
+}
+
+.block-payment {
+margin-top: 5em;
+width: 100%;
+position: relative;
+}
+
+.block-payment .block-content .element-title {
+width: 15em;
+}
+
+.showfull-switch {
+cursor: pointer;
+}
+
+.arrow {
+border-width: 8px;
+z-index: 10;
+}
+.arrow,
+.arrow:after {
+/* position: absolute; */
+display: block;
+width: 0;
+height: 0;
+border-color: transparent;
+border-style: solid;
+}
+.arrow.top {
+margin-left: 0.8em;
+border-top-width: 0;
+border-bottom-color: #eee;
+border-bottom-color: #ccc;
+}
+
+.icbutton button {
+color:#000;
+background: repeat-x center #DDD;
+border:2px solid #999;
+cursor:pointer;
+}
+
+.grid-cell button {
+max-width: 2em;
+}
+
+.overlay {
+position: absolute;
+display: none;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: rgba(0,0,0,0.5);
+z-index: 1000;
+}
+

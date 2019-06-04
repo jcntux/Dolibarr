@@ -1,0 +1,8 @@
+# Dolibarr language file - en_US - prodsClient
+CHARSET=UTF-8
+Module62450Name=ProdsClient
+Module62450Desc=Add a tab in third party view to list products billed or ordered to this 3rd party.
+prodsClientsHeader=Products of %s
+tabTitle=Products
+prodsClientTitle=List of products in %s to %s  %s  %s
+resetFilters=Reset filters

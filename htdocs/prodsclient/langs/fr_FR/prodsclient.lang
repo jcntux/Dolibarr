@@ -1,0 +1,12 @@
+# Dolibarr language file - fr_FR - prodsclient
+CHARSET=UTF-8
+Module62450Name=ProdsClient
+Module62450Desc=Ajoute un tab dans la vue du tiers pour lister les produits facturés ou commandés à ce tiers.
+prodsClientsHeader=Produits de %s
+tabTitle=Produits
+prodsClientTitle=Liste des produits dans les %s au %s  %s  %s
+resetFilters=Effacer les filtres
+orders=commandes
+invoices=factures
+customer=client
+supplier=fournisseur

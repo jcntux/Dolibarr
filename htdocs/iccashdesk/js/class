@@ -1,0 +1,10 @@
+function Person(name, gender){
+this.name = name;
+this.gender = gender;
+}
+Person.prototype.speak = function(){
+alert("Howdy, my name is" + this.name);
+}
+var person = new Person("Bob", "M");
+person.speak(); 
+

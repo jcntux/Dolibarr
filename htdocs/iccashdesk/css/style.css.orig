@@ -1,0 +1,378 @@
+/* Copyright (C) 2013 IComm NOMOREDJO Jean-christophe <jcnrdjo@yahoo.fr>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+body {
+background: #eee;
+color: #333;
+margin: 0;
+padding: 0;
+text-align: center;
+font: 0.7em verdana, arial, helvetica;
+}
+
+a {
+text-decoration: none;
+}
+
+/*
+ * Page
+ */
+.page {
+border: 2px solid #000;
+background: #fff;
+text-align: left;
+margin: 10px auto;
+height: auto;
+width: 860px;
+min-height: 480px;
+}
+
+.page-header {
+font-size: 14px;
+margin: 0 auto;
+height: 84px;
+background: #7bf;
+padding: 4px;
+}
+
+.page-footer {
+clear: both;
+height: 15px;
+}
+
+/*
+ * Tabs menu
+ */
+#overlay {
+/* display: table; */
+margin: 0 auto;
+min-height: 15px;
+min-width: 700px;
+padding: 0.2em 26px 2em 0.2em;
+position: relative;
+width: 88%;
+}
+
+#overlay-titlebar {
+padding: 0 20px;
+position: relative;
+white-space: nowrap;
+z-index: 100;
+}
+
+#overlay-tabs {
+line-height: 27px;
+position: absolute;
+left: 20px;
+text-transform: uppercase;
+}
+
+#overlay-tabs li {
+display: inline;
+list-style: none inside none;
+margin: 0 0 0 -3px;
+padding: 0;
+}
+
+#overlay-tabds li a,
+#overlay-tabs li {
+background-color: #A6A7A2;
+border-radius: 2px;
+color: #000;
+display: inline-block;
+font-size: 11px;
+font-weight: bold;
+margin: 0 0 2px;
+outline: 0 none;
+padding: 0 14px;
+transition: background-color 0.2s;
+-webkit-transition: background-color 0.2s;
+}
+
+#overlay-tabs li.active {
+background-color: #eee;
+}
+
+#overlay-tabs li:hover {
+background: #ccc;
+}
+
+/*
+ * Tabs
+ */
+
+.tab-content {
+/* width: 990px; */
+height: auto;
+margin: 5px;
+}
+
+.tab-left {
+width: 540px;
+height: auto;
+float: left;
+}
+
+.tab-cart {
+float: right;
+width: 285px;
+height: auto;
+}
+
+.tab-top {
+height: 40px;
+}
+
+.tab-bottom {
+height: 100px;
+}
+
+.icomm-field {
+display: block;
+}
+
+.icomm-field-photo {
+float: left;
+margin-right: 2px;
+}
+
+.icomm-field-photo,
+.icomm-field {
+margin-bottom: 2px;
+}
+
+.icomm-field-detail {
+min-height: 120px;
+}
+
+.icomm-field-title {
+font-weight: bold;
+padding-right: 3px;
+margin-right: 0.5em;
+display: inline;
+}
+
+.icomm-field-value {
+display: inline;
+}
+
+.icomm-cart {
+margin-bottom: 1em;
+}
+
+.icomm-cart-item {
+border-bottom: 1px solid #EEEEEE;
+margin: 0 auto 10px;
+padding-bottom: 10px;
+text-align: center;
+width: 180px;
+}
+
+.icomm-cart-title {
+border-bottom: 1px dotted;
+color: #5CA64D;
+font-size: 1.4em;
+font-weight: bold;
+text-align: center;
+}
+
+.icomm-cart-item-title {
+font-weight: bold;
+color: #333333;
+display: inline;
+}
+
+.icomm-cart-total {
+border: 1px dotted #6D3F6D;
+color: #6D3F6D;
+font-size: 1.4em;
+font-weight: bold;
+margin: 30px auto 0 auto;
+padding: 5px;
+text-align: center;
+}
+
+.texte1,
+.texte1_off {
+width: 60px;
+}
+
+.icomm-search-item {
+display: block;
+overflow: hidden;
+}
+
+.icomm-search-item input {
+width: 98%;
+}
+
+.icomm-fieldset {
+margin-top: 10px;
+}
+
+.icomm-fieldset fieldset {
+border: 2px solid #DDDDDD;
+width: 540px;
+}
+
+fieldset legend {
+color: #559900;
+font-size: 1.2em;
+font-weight: bold;
+margin: 0;
+}
+
+.icomm-item-search-result {
+display: none;
+padding: 4px;
+}
+
+.icomm-button {
+width: auto;
+height: 2em;
+}
+
+.center {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.icomm-block-center {
+text-align: center;
+}
+
+.modal-button {
+padding: 20px;
+text-align: center;
+background: #fff;
+}
+
+#overlay-container {
+position: absolute;
+display: none;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+z-index: 500;
+}
+
+.icomm-popup {
+position: fixed;
+top: 30%;
+left: 38%;
+}
+
+#overlay-container {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 500;
+width: 100%
+height: 100%;
+background-color: rgba(0,0,0,0.5);
+}
+
+.suspended-item img {
+vertical-align: middle;
+padding-right: 4px;
+}
+
+#viewer-terminal,
+.viewer-terminal {
+border: 1px solid #000;
+background: #fff;
+padding: 0.6em;
+margin: 1em;
+}
+
+.icomm-viewer-title {
+background: #4590E2;
+padding: 0.4em;
+text-align: center;
+font-weight: bold;
+margin-bottom: 1em;
+color: #fff;
+}
+
+.icomm-viewer-title img {
+float: right;
+}
+
+#viewer-terminal table tr {
+height: 4em;
+}
+
+#viewer-terminal table td {
+min-width: 4em;
+}
+
+.table-title {
+background: #000;
+color: #fff;
+}
+
+.right {
+text-align: right;
+}
+
+.bold {
+font-weight: bold;
+}
+
+#search_refid {
+width: 98%;
+}
+
+.medium-size {
+max-width: 3em;
+}
+
+.flat-button
+{
+border-style:none;
+background-color:transparent;
+padding:0px;
+font-size:9px;
+border-width:0px;
+color:#0B63A2;
+vertical-align:middle;
+cursor: pointer;
+}
+
+.delete {
+background: #b2b2b2;
+}
+
+.error {
+border-color: #f00;
+}
+
+#message-box {
+display: none;
+position: relative;
+border: 4px solid #77BBFF;
+margin: 1em;
+}
+
+#viewer-grid-booking {
+margin-bottom: 1em;
+}
+
+.off {
+display: none;
+}
